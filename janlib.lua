@@ -950,17 +950,14 @@ library.createList = function(option, parent)
     })
 
     local layout = library:Create("UIListLayout", {
-        HorizontalAlignment = Enum.HorizontalAlignment.Center,
-        SortOrder = Enum.SortOrder.LayoutOrder,
-        Padding = UDim.new(1, 7),
-        Parent = self.content
+        Padding = UDim.new(0, 2),
+        Parent = option.content
     })
-    
+
     library:Create("UIPadding", {
-        PaddingTop = UDim.new(1, 30),
-        PaddingLeft = UDim.new(1, 7),
-        PaddingRight = UDim.new(1, 7),
-        Parent = self.content
+        PaddingTop = UDim.new(0, 4),
+        PaddingLeft = UDim.new(0, 4),
+        Parent = option.content
     })
 
     local valueCount = 0
@@ -2133,12 +2130,12 @@ function library:AddTab(title, pos)
                 local layout = library:Create("UIListLayout", {
                     HorizontalAlignment = Enum.HorizontalAlignment.Center,
                     SortOrder = Enum.SortOrder.LayoutOrder,
-                    Padding = UDim.new(0, 7),
+                    Padding = UDim.new(0, 2),
                     Parent = self.content
                 })
 
                 library:Create("UIPadding", {
-                    PaddingTop = UDim.new(0, 30),
+                    PaddingTop = UDim.new(0, 12),
                     Parent = self.content
                 })
 
@@ -2194,14 +2191,14 @@ function library:AddTab(title, pos)
             local layout = library:Create("UIListLayout", {
                 HorizontalAlignment = Enum.HorizontalAlignment.Center,
                 SortOrder = Enum.SortOrder.LayoutOrder,
-                Padding = UDim.new(0, 30),
+                Padding = UDim.new(0, 12),
                 Parent = self.main
             })
 
             library:Create("UIPadding", {
-                PaddingTop = UDim.new(0, 7),
-                PaddingLeft = UDim.new(0, 7),
-                PaddingRight = UDim.new(0, 7),
+                PaddingTop = UDim.new(0, 8),
+                PaddingLeft = UDim.new(0, 2),
+                PaddingRight = UDim.new(0, 2),
                 Parent = self.main
             })
 
