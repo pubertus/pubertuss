@@ -950,14 +950,17 @@ library.createList = function(option, parent)
     })
 
     local layout = library:Create("UIListLayout", {
-        Padding = UDim.new(0, 2),
-        Parent = option.content
+        HorizontalAlignment = Enum.HorizontalAlignment.Center,
+        SortOrder = Enum.SortOrder.LayoutOrder,
+        Padding = UDim.new(0, 2 * 2.5),
+        Parent = self.content
     })
-
+    
     library:Create("UIPadding", {
-        PaddingTop = UDim.new(0, 4),
-        PaddingLeft = UDim.new(0, 4),
-        Parent = option.content
+        PaddingTop = UDim.new(0, 12 * 2.5),
+        PaddingLeft = UDim.new(0, 2 * 2.5),
+        PaddingRight = UDim.new(0, 2 * 2.5),
+        Parent = self.content
     })
 
     local valueCount = 0
